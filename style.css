@@ -88,14 +88,18 @@ body {
   margin-top: 0;
   font-size: 32px;
   color: #612cde;
+  margin-left: 25px;
+  text-align: justify;
 }
 
 .card p {
   color: black;
+  font-family: "Inter";
   font-size: 1rem;
   margin: auto;
   width: 90%;
   line-height: 1.5;
+  text-align: justify;
 }
 
 .card a {
