@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Force de la nature",
+    "description": "400 PV+55 résistance magique"
+  },
+  {
+    "name": "Visage spirituel",
+    "description": "400 PV+50 résistance magique"
+  },
+  {
+    "name": "Jak'Sho, le Protéiforme",
+    "description": "350 PV+45 armure+45 résistance magique"
+  },
+  {
+    "name": "Masque abyssal",
+    "description": "300 PV+45 résistance magique"
+  },
+  {
+    "name": "Au bout du rouleau",
+    "description": "50% de vitesse d'attaque+45 résistance magique"
+  },
+  {
+    "name": "Gueule de Malmortius",
+    "description": "60 dégâts d'attaque+15 accélération de compétence+40 résistance magique"
+  },
+  {
+    "name": "Cimeterre mercuriel",
+    "description": "40 dégâts d'attaque+40 résistance magique"
+  },
+  {
+    "name": "Voile de la banshee",
+    "description": "105 puissance+40 résistance magique"
+  },
+  {
+    "name": "Jugement d'Atma",
+    "description": "25 dégâts d'attaque+30 armure+30 résistance magique"
+  },
+  {
+    "name": "Linceul de la congruence",
+    "description": "200 PV+30 armure+30 résistance magique"
+  },
+  {
+    "name": "Vertu radieuse",
+    "description": "350 PV+30 armure+30 résistance magique"
+  },
+  {
+    "name": "Convergence de Zeke",
+    "description": "300 PV+25 armure+25 résistance magique"
+  },
+  {
+    "name": "Médaillon de l'Iron Solari",
+    "description": "200 PV+25 armure+25 résistance magique"
+  }
+]

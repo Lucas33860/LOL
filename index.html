@@ -9,47 +9,98 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <h1>Yo les développeuses</h1>
-    <div>
-      <!-- <img src="images/podium.webp" id="podium" alt="beau podium" />  -->
-    </div>
-    <script>
-      gsap.from("#podium", {
-        duration: 2,
-        opacity: 0,
-        y: -50,
-        ease: "power2.out",
-      });
-      gsap.to("#podium", {
-        duration: 2,
-        rotation: 360,
-        scale: 1,
-        ease: "elastic.out(1, 0.3)",
-        yoyo: true,
-      });
+    <header>
+    <h1>Découvrez nos guides pour optimiser l’équipement de vos champions
+    </h1>
+    <h2>Deviens le meilleur de tes mates</h2>
+    <p>Seul ou en équipe, League of Legends exige une grande compréhension des équipements pour progresser et optimiser son jeu. Nos guides t'aideront à maîtriser les objets essentiels et à tirer partie de leur potentiel en combat !</p>
+</header>
 
-      document
-        .getElementById("podium")
-        .addEventListener("mouseenter", function () {
-          gsap.to("#podium", {
-            duration: 0.1,
-            x: "+20",
-            y: "+20",
-            yoyo: true,
-            repeat: 1,
-            ease: "power1.inOut",
-          });
-        });
+    <section id="projets" class="container espace">
+        <div class="project-cards">
+          <div class="card">
+            <img
+              src="images/guide1.png"
+              alt="photo mage"
+            />
+            <div class="card-content">
+              <h2>Guide des Items de chaque caractéristiques</h2>
+              <p>
+                Découvrez les meilleurs objets pour chaque type de champion et optimisez votre équipement pour devenir le meilleur joueur de votre équipe.
+              </p>
+              <a href="guide1.html" class="button">Voir le guide</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="images/guide2.webp"
+              alt="photo projet scratch"
+            />
+            <div class="card-content">
+              <h2>Guide Premier item a faire selon sa classe</h2>
+              <p>
+                Équipe-toi intelligemment et deviens la terreur de la Faille ! Apprend à choisir le meilleur item pour chaque classe de champion avec le meilleur rapport qualité prix.
+              </p>
+              <a href="guide2.html" class="button">Voir le guide</a>
+            </div>
+          </div>
+        </section>
 
-      document
-        .getElementById("podium")
-        .addEventListener("mouseleave", function () {
-          gsap.to("#podium", {
-            duration: 0.1,
-            x: 0,
-            ease: "power1.inOut",
-          });
-        });
-    </script>
+        <section id="projets" class="container espace">
+            <div class="project-cards">
+              <div class="card">
+                <img
+                  src="images/guide3.png"
+                  alt="photo projet scratch"
+                />
+                <div class="card-content">
+                  <h2>Guide des spécialités des champions</h2>
+                  <p>
+                    Faites la différence dès le début ! Choisissez la meilleure stratégie pour dominer la partie, avant même que l'ennemi n'ait eu le temps de respawn.
+                  </p>
+                  <a href="scratch.html" class="button">Voir le guide</a>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  src="images/guide4.webp"
+                  alt="photo projet scratch"
+                />
+                <div class="card-content">
+                  <h2>Guide achat de début de partie</h2>
+                  <p>
+                    Prenez une longueur d'avance dès le début ! Pour bien démarrer la partie et prendre le contrôle de la Faille dès les premières secondes choisissez les bons items
+                  </p>
+                  <a href="guide4.html" class="button">Voir le guide</a>
+                </div>
+              </div>
+            </section>
+          
+            <section class="garticle">
+                <h1>Qu'est ce que LEAGUE OF LEGENDS ?</h1>
+                <p>
+                    League of legends est le MOBA “Multiplayer Online Battle Arena” (Arène de bataille multijoueur en ligne) le plus joué dans le monde à l’heure actuelle avec plus de 100 millions de joueurs actifs.
+                </p>
+                <p>
+                    Le but du jeu, en équipe de 5 contre 5 détruire les bâtiments de la base adverse afin d'abattre le bâtiment central qui s’appelle le ”Nexus”.   
+                </p>
+                <p>
+                    Pour ce faire, chaque joueur va se munir d’un personnage que l’on appelle des ‘champions’ qui possèdent tous un type et des compétences différentes afin de battre l’équipe adverse. Chaque type de champion peut pendant la partie acheter différents objets qui augmentent les dégâts ou la résistance de son personnage.
+                </p>
+                <p>
+                    Dans League of legends (LoL) 168 champions sont mis à la disposition de tous avec 6 types différents qui sont : Assassin, Combattant, Mage, Tank, Support et Tireur. 
+                </p>
+                <div class="logotypes">
+                    <img src="images/assassin.webp" alt="logo">
+                    <img src="images/combattant.webp" alt="logo">
+                    <img src="images/mage.webp" alt="logo">
+                    <img src="images/support.webp" alt="logo">
+                    <img src="images/tank.webp" alt="logo">
+                    <img src="images/tireur.webp" alt="logo">
+                </div>
+                <p>Chaque champion à ses caractéristiques et ses compétences qui lui sont propres et durant les parties chaque personnage peut choisir des objets qui permettent d’améliorer ses capacités en fonction de son type. Par exemple, pour un mage, les objets apporteront de la puissance magique alors qu’un tank va gagner des PV (points de vie) mais également de l’armure et de la résistance magique.  </p>
+                <p>Notre but va être de vous apprendre à acheter les bons items pour les joueurs débutants et vous faire comprendre quels sont les meilleurs objets à faire et pourquoi.</p>
+                <img class="map" src="images/map.png" alt="map League of legends">
+            </section>
   </body>
 </html>

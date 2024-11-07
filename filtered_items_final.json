@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Cristal de saphir",
+    "gold": 300,
+    "description": "<mainText><stats><attention>+300</attention> mana</stats><br><br></mainText>",
+    "stats": {
+      "FlatMPPoolMod": 300
+    }
+  },
+  {
+    "name": "Cristal de rubis",
+    "gold": 400,
+    "description": "<mainText><stats><attention>+150</attention> PV</stats><br><br></mainText>",
+    "stats": {
+      "FlatHPPoolMod": 150
+    }
+  },
+  {
+    "name": "Armure d'étoffe",
+    "gold": 300,
+    "description": "<mainText><stats><attention>+15</attention> armure</stats><br><br></mainText>",
+    "stats": {
+      "FlatArmorMod": 15
+    }
+  },
+  {
+    "name": "Cape de néant",
+    "gold": 400,
+    "description": "<mainText><stats><attention>+20</attention> résistance magique</stats><br><br></mainText>",
+    "stats": {
+      "FlatSpellBlockMod": 20
+    }
+  },
+  {
+    "name": "Épée longue",
+    "gold": 350,
+    "description": "<mainText><stats><attention>+10</attention> dégâts d'attaque</stats><br><br></mainText>",
+    "stats": {
+      "FlatPhysicalDamageMod": 10
+    }
+  },
+
+  {
+    "name": "Dague",
+    "gold": 250,
+    "description": "<mainText><stats><attention>+10%</attention> de vitesse d'attaque</stats><br><br></mainText>",
+    "stats": {
+      "PercentAttackSpeedMod": 0.1
+    }
+  },
+  {
+    "name": "Collier rafraîchissant",
+    "gold" : 300,
+    "description": "<mainText><stats><attention>+100%</attention> de régénération de base des PV</stats><br><br></mainText>",
+    "stats": {}
+  },
+
+  {
+    "name": "Tome d'amplification",
+    "gold" : 400,
+    "description": "<mainText><stats><attention>+20</attention> puissance</stats><br><br></mainText>",
+    "stats": { "FlatMagicDamageMod": 20 }
+  },
+
+{
+   "name": "Charme féérique",
+   "gold": 200,  
+    "description": "<mainText><stats><attention>+50%</attention> de régénération de base du mana</stats><br><br></mainText>",
+    "stats": {}
+ 
+}
+
+]

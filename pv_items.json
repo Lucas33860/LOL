@@ -1,0 +1,188 @@
+[
+  {
+    "name": "Armure de Warmog",
+    "description": "1000 PV"
+  },
+  {
+    "name": "Cœuracier",
+    "description": "900 PV"
+  },
+  {
+    "name": "Hydre titanesque",
+    "description": "40 dégâts d'attaque+600 PV"
+  },
+  {
+    "name": "Fimbulvetr",
+    "description": "550 PV"
+  },
+  {
+    "name": "Approche de l'hiver",
+    "description": "550 PV"
+  },
+  {
+    "name": "Armure sanguine",
+    "description": "30 dégâts d'attaque+550 PV"
+  },
+  {
+    "name": "Brise-coques",
+    "description": "40 dégâts d'attaque+500 PV"
+  },
+  {
+    "name": "Épée dentelée chimico-punk",
+    "description": "45 dégâts d'attaque+450 PV"
+  },
+  {
+    "name": "Lance de Shojin",
+    "description": "45 dégâts d'attaque+450 PV"
+  },
+  {
+    "name": "Estropieur",
+    "description": "40 dégâts d'attaque+25% de vitesse d'attaque+450 PV"
+  },
+
+  {
+    "name": "Éviscérateur",
+    "description": "55 dégâts d'attaque+400 PV"
+  },
+  {
+    "name": "Sceptre de Rylai",
+    "description": "65 puissance+400 PV"
+  },
+  {
+    "name": "Bâton séculaire",
+    "description": "50 puissance+400 PV"
+  },
+  {
+    "name": "Médaillon d'excitation",
+    "description": "30 dégâts d'attaque+400 PV"
+  },
+  {
+    "name": "Couperet noir",
+    "description": "40 dégâts d'attaque+400 PV"
+  },
+  {
+    "name": "Gage de Sterak",
+    "description": "400 PV"
+  },
+  {
+    "name": "Force de la nature",
+    "description": "400 PV"
+  },
+  {
+    "name": "Visage spirituel",
+    "description": "400 PV"
+  },
+  {
+    "name": "Morellonomicon",
+    "description": "75 puissance+350 PV"
+  },
+  {
+    "name": "Étreinte démoniaque",
+    "description": "75 puissance+350 PV"
+  },
+  {
+    "name": "Volonté cosmique",
+    "description": "70 puissance+350 PV"
+  },
+  {
+    "name": "Créateur de failles",
+    "description": "70 puissance+350 PV"
+  },
+  {
+    "name": "Ceinture-roquette Hextech",
+    "description": "60 puissance+350 PV"
+  },
+  {
+    "name": "Plaque du mort",
+    "description": "350 PV"
+  },
+  {
+    "name": "Jak'Sho, le Protéiforme",
+    "description": "350 PV"
+  },
+  {
+    "name": "Présage de Randuin",
+    "description": "350 PV"
+  },
+  {
+    "name": "Égide solaire",
+    "description": "350 PV"
+  },
+  {
+    "name": "Vertu radieuse",
+    "description": "350 PV"
+  },
+  {
+    "name": "Force de la trinité",
+    "description": "36 dégâts d'attaque+30% de vitesse d'attaque+333 PV"
+  },
+  {
+    "name": "Tourment de Liandry",
+    "description": "70 puissance+300 PV"
+  },
+  {
+    "name": "Pourfendeur divin",
+    "description": "40 dégâts d'attaque+300 PV"
+  },
+  {
+    "name": "Moissonneur nocturne",
+    "description": "90 puissance+300 PV"
+  },
+  {
+    "name": "Gantelet givrant",
+    "description": "300 PV"
+  },
+  {
+    "name": "Masque abyssal",
+    "description": "300 PV"
+  },
+  {
+    "name": "Convergence de Zeke",
+    "description": "300 PV"
+  },
+
+  {
+    "name": "Couronne de la Reine brisée",
+    "description": "85 puissance+250 PV"
+  },
+  {
+    "name": "Manteau de la nuit",
+    "description": "50 dégâts d'attaque+15 létalité+250 PV"
+  },
+  {
+    "name": "Sac de l'explorateur",
+    "description": "250 PV"
+  },
+  {
+    "name": "Pierre de balise vigilante",
+    "description": "250 PV"
+  },
+  {
+    "name": "Bénédiction de Mikael",
+    "description": "250 PV"
+  },
+  {
+    "name": "Régénérateur de pierre de lune",
+    "description": "25 puissance+200 PV"
+  },
+  {
+    "name": "Linceul de la congruence",
+    "description": "200 PV"
+  },
+  {
+    "name": "Rédemption",
+    "description": "200 PV"
+  },
+  {
+    "name": "Médaillon de l'Iron Solari",
+    "description": "200 PV"
+  },
+  {
+    "name": "Vœu du chevalier",
+    "description": "200 PV"
+  },
+  {
+    "name": "Cotte épineuse",
+    "description": "150 PV"
+  }
+]

@@ -1,0 +1,179 @@
+[
+  {
+    "name": "Soif-de-sang",
+    "description": "80 dégâts d'attaque"
+  },
+  {
+    "name": "Lame d'infini",
+    "description": "70 dégâts d'attaque"
+  },
+  {
+    "name": "Sabre spectral",
+    "description": "70 dégâts d'attaque"
+  },
+  {
+    "name": "Lame tempête",
+    "description": "65 dégâts d'attaque"
+  },
+  {
+    "name": "Hydre vorace",
+    "description": "65 dégâts d'attaque"
+  },
+  {
+    "name": "Faux spectrale",
+    "description": "60 dégâts d'attaque"
+  },
+  {
+    "name": "Gueule de Malmortius",
+    "description": "60 dégâts d'attaque"
+  },
+  {
+    "name": "Éclipse",
+    "description": "60 dégâts d'attaque"
+  },
+  {
+    "name": "Danse de la mort",
+    "description": "60 dégâts d'attaque"
+  },
+  {
+    "name": "Lame spectre de Youmuu",
+    "description": "60 dégâts d'attaque"
+  },
+  {
+    "name": "Épée vespérale de Draktharr",
+    "description": "60 dégâts d'attaque"
+  },
+  {
+    "name": "Orgueil",
+    "description": "60 dégâts d'attaque"
+  },
+  {
+    "name": "Hydre profane",
+    "description": "60 dégâts d'attaque"
+  },
+
+  {
+    "name": "Éviscérateur",
+    "description": "55 dégâts d'attaque"
+  },
+  {
+    "name": "Ange gardien",
+    "description": "55 dégâts d'attaque"
+  },
+
+  {
+    "name": "Griffes du rôdeur",
+    "description": "55 dégâts d'attaque"
+  },
+  {
+    "name": "Arc axiomatique",
+    "description": "55 dégâts d'attaque"
+  },
+  {
+    "name": "Crochet de serpent",
+    "description": "55 dégâts d'attaque"
+  },
+  {
+    "name": "Arc-bouclier immortel",
+    "description": "55 dégâts d'attaque"
+  },
+  {
+    "name": "Manteau de la nuit",
+    "description": "50 dégâts d'attaque"
+  },
+
+  {
+    "name": "Percepteur",
+    "description": "50 dégâts d'attaque"
+  },
+  {
+    "name": "Force du vent",
+    "description": "50 dégâts d'attaque"
+  },
+  {
+    "name": "Glaive d'ombre",
+    "description": "50 dégâts d'attaque"
+  },
+  {
+    "name": "Poignard de Statikk",
+    "description": "50 dégâts d'attaque"
+  },
+  {
+    "name": "Épée dentelée chimico-punk",
+    "description": "45 dégâts d'attaque"
+  },
+  {
+    "name": "Tueur de krakens",
+    "description": "45 dégâts d'attaque"
+  },
+  {
+    "name": "Lance de Shojin",
+    "description": "45 dégâts d'attaque"
+  },
+  {
+    "name": "Rancune de Serylda",
+    "description": "45 dégâts d'attaque"
+  },
+  {
+    "name": "Pistolame Hextech",
+    "description": "80 puissance+40 dégâts d'attaque"
+  },
+  {
+    "name": "Cimeterre mercuriel",
+    "description": "40 dégâts d'attaque"
+  },
+  {
+    "name": "Couperet noir",
+    "description": "40 dégâts d'attaque"
+  },
+  {
+    "name": "Estropieur",
+    "description": "40 dégâts d'attaque"
+  },
+  {
+    "name": "Brise-coques",
+    "description": "40 dégâts d'attaque"
+  },
+  {
+    "name": "Hydre titanesque",
+    "description": "40 dégâts d'attaque"
+  },
+  {
+    "name": "Pourfendeur divin",
+    "description": "40 dégâts d'attaque"
+  },
+  {
+    "name": "Lame du roi déchu",
+    "description": "40 dégâts d'attaque"
+  },
+  {
+    "name": "Force de la trinité",
+    "description": "36 dégâts d'attaque"
+  },
+  {
+    "name": "Rappel mortel",
+    "description": "35 dégâts d'attaque"
+  },
+  {
+    "name": "Muramana",
+    "description": "35 dégâts d'attaque"
+  },
+  {
+    "name": "Manamune",
+    "description": "35 dégâts d'attaque"
+  },
+
+  {
+    "name": "Salutations de Dominik",
+    "description": "35 dégâts d'attaque"
+  },
+
+  {
+    "name": "Épée du divin",
+    "description": "30 dégâts d'attaque"
+  },
+  {
+    "name": "Lame enragée de Guinsoo",
+    "description": "30 dégâts d'attaque"
+  }
+]

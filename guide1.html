@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guide des Items de chaque caractéristiques</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+      const items = [
+        { name: "Coiffe de Rabadon", puissance: 130 },
+        { name: "Fléau de liche", puissance: 115 },
+        { name: "Flamme-ombre", puissance: 110 },
+        { name: "Sablier de Zhonya", puissance: 105 },
+        { name: "Voile de la banshee", puissance: 105 },
+        { name: "Compagnon de Luden", puissance: 100 },
+        { name: "Bâton du vide", puissance: 95 },
+        { name: "Onde orageuse", puissance: 90 },
+        { name: "Moissonneur nocturne", puissance: 90 },
+        { name: "Malfaisance", puissance: 85 },
+        { name: "Couronne de la Reine brisée", puissance: 85 },
+        { name: "Dent de Nashor", puissance: 80 },
+        { name: "Pistolame Hextech", puissance: 80 },
+        { name: "Torche noire", puissance: 80 },
+        { name: "Étreinte démoniaque", puissance: 75 },
+        { name: "Concentration lointaine", puissance: 75 },
+        { name: "Morellonomicon", puissance: 75 },
+        { name: "Créateur de failles", puissance: 70 },
+        { name: "Volonté cosmique", puissance: 70 },
+        { name: "Bâton de l'archange", puissance: 70 },
+        { name: "Tourment de Liandry", puissance: 70 },
+        { name: "Gel éternel", puissance: 70 },
+        { name: "Tresse électrique", puissance: 70 },
+        { name: "Étreinte du séraphin", puissance: 70 },
+        { name: "Sceptre de Rylai", puissance: 65 },
+        { name: "Perplexité", puissance: 60 },
+        { name: "Malédiction du sanguinaire", puissance: 60 },
+        { name: "Mandat impérial", puissance: 60 },
+        { name: "Fleur de crypte", puissance: 60 },
+        { name: "Ceinture-roquette Hextech", puissance: 60 },
+        { name: "Bâton séculaire", puissance: 50 },
+        { name: "Promesse ineffable", puissance: 50 },
+        { name: "Chant de guerre de Shurelya", puissance: 50 },
+        { name: "Rite des ruines", puissance: 50 },
+        { name: "Cœur de l'aube", puissance: 45 },
+        { name: "Encensoir ardent", puissance: 45 },
+        { name: "Échos d'Helia", puissance: 35 },
+        { name: "Bâton des flots", puissance: 35 },
+        { name: "Épée de l'aube", puissance: 30 },
+        { name: "Lame enragée de Guinsoo", puissance: 30 },
+        { name: "Régénérateur de pierre de lune", puissance: 25 },
+      ];
+    </script>
+    <script>
+      const armureItems = [
+        { name: "Cœur gelé", armure: 75 },
+        { name: "Présage de Randuin", armure: 75 },
+        { name: "Cotte épineuse", armure: 75 },
+        { name: "Lithoplastron de gargouille", armure: 60 },
+        { name: "Désespoir infini", armure: 60 },
+        { name: "Plaque du mort", armure: 55 },
+        { name: "Danse de la mort", armure: 50 },
+        { name: "Égide solaire", armure: 50 },
+        { name: "Sablier de Zhonya", armure: 50 },
+        { name: "Gantelet givrant", armure: 50 },
+        { name: "Jak'Sho, le Protéiforme", armure: 45 },
+        { name: "Ange gardien", armure: 45 },
+        { name: "Vœu du chevalier", armure: 40 },
+        { name: "Linceul de la congruence", armure: 30 },
+        { name: "Vertu radieuse", armure: 30 },
+        { name: "Convergence de Zeke", armure: 25 },
+        { name: "Médaillon de l'Iron Solari", armure: 25 },
+      ];
+    </script>
+
+    <script>
+      const attackDamageItems = [
+        { name: "Soif-de-sang", degatsAttaque: 80 },
+        { name: "Lame d'infini", degatsAttaque: 70 },
+        { name: "Sabre spectral", degatsAttaque: 70 },
+        { name: "Lame tempête", degatsAttaque: 65 },
+        { name: "Hydre vorace", degatsAttaque: 65 },
+        { name: "Faux spectrale", degatsAttaque: 60 },
+        { name: "Gueule de Malmortius", degatsAttaque: 60 },
+        { name: "Éclipse", degatsAttaque: 60 },
+        { name: "Danse de la mort", degatsAttaque: 60 },
+        { name: "Lame spectre de Youmuu", degatsAttaque: 60 },
+        { name: "Épée vespérale de Draktharr", degatsAttaque: 60 },
+        { name: "Orgueil", degatsAttaque: 60 },
+        { name: "Hydre profane", degatsAttaque: 60 },
+        { name: "Éviscérateur", degatsAttaque: 55 },
+        { name: "Ange gardien", degatsAttaque: 55 },
+        { name: "Griffes du rôdeur", degatsAttaque: 55 },
+        { name: "Arc axiomatique", degatsAttaque: 55 },
+        { name: "Crochet de serpent", degatsAttaque: 55 },
+        { name: "Arc-bouclier immortel", degatsAttaque: 55 },
+        { name: "Manteau de la nuit", degatsAttaque: 50 },
+        { name: "Percepteur", degatsAttaque: 50 },
+        { name: "Force du vent", degatsAttaque: 50 },
+        { name: "Glaive d'ombre", degatsAttaque: 50 },
+        { name: "Poignard de Statikk", degatsAttaque: 50 },
+        { name: "Épée dentelée chimico-punk", degatsAttaque: 45 },
+        { name: "Tueur de krakens", degatsAttaque: 45 },
+        { name: "Lance de Shojin", degatsAttaque: 45 },
+        { name: "Rancune de Serylda", degatsAttaque: 45 },
+        { name: "Cimeterre mercuriel", degatsAttaque: 40 },
+        { name: "Couperet noir", degatsAttaque: 40 },
+        { name: "Estropieur", degatsAttaque: 40 },
+        { name: "Hydre titanesque", degatsAttaque: 40 },
+        { name: "Lame du roi déchu", degatsAttaque: 40 },
+        { name: "Rappel mortel", degatsAttaque: 35 },
+        { name: "Manamune", degatsAttaque: 35 },
+        { name: "Salutations de Dominik", degatsAttaque: 35 },
+        { name: "Épée du divin", degatsAttaque: 30 },
+        { name: "Lame enragée de Guinsoo", degatsAttaque: 30 },
+      ];
+    </script>
+
+    <script>
+      const magicResistItems = [
+        { name: "Force de la nature", resistanceMagique: 55 },
+        { name: "Visage spirituel", resistanceMagique: 50 },
+        { name: "Jak'Sho, le Protéiforme", resistanceMagique: 45 },
+        { name: "Masque abyssal", resistanceMagique: 45 },
+        { name: "Au bout du rouleau", resistanceMagique: 45 },
+        { name: "Gueule de Malmortius", resistanceMagique: 40 },
+        { name: "Cimeterre mercuriel", resistanceMagique: 40 },
+        { name: "Voile de la banshee", resistanceMagique: 40 },
+        { name: "Jugement d'Atma", resistanceMagique: 30 },
+        { name: "Linceul de la congruence", resistanceMagique: 30 },
+        { name: "Vertu radieuse", resistanceMagique: 30 },
+        { name: "Convergence de Zeke", resistanceMagique: 25 },
+        { name: "Médaillon de l'Iron Solari", resistanceMagique: 25 },
+      ];
+    </script>
+
+    <script>
+      const healthItems = [
+        { name: "Armure de Warmog", pv: 1000 },
+        { name: "Cœuracier", pv: 900 },
+        { name: "Hydre titanesque", pv: 600 },
+        { name: "Fimbulvetr", pv: 550 },
+        { name: "Approche de l'hiver", pv: 550 },
+        { name: "Armure sanguine", pv: 550 },
+        { name: "Brise-coques", pv: 500 },
+        { name: "Épée dentelée chimico-punk", pv: 450 },
+        { name: "Lance de Shojin", pv: 450 },
+        { name: "Estropieur", pv: 450 },
+        { name: "Éviscérateur", pv: 400 },
+        { name: "Sceptre de Rylai", pv: 400 },
+        { name: "Bâton séculaire", pv: 400 },
+        { name: "Médaillon d'excitation", pv: 400 },
+        { name: "Couperet noir", pv: 400 },
+        { name: "Gage de Sterak", pv: 400 },
+        { name: "Force de la nature", pv: 400 },
+        { name: "Visage spirituel", pv: 400 },
+        { name: "Morellonomicon", pv: 350 },
+        { name: "Étreinte démoniaque", pv: 350 },
+        { name: "Volonté cosmique", pv: 350 },
+        { name: "Créateur de failles", pv: 350 },
+        { name: "Ceinture-roquette Hextech", pv: 350 },
+        { name: "Plaque du mort", pv: 350 },
+        { name: "Jak'Sho, le Protéiforme", pv: 350 },
+        { name: "Présage de Randuin", pv: 350 },
+        { name: "Égide solaire", pv: 350 },
+        { name: "Vertu radieuse", pv: 350 },
+        { name: "Force de la trinité", pv: 333 },
+        { name: "Tourment de Liandry", pv: 300 },
+        { name: "Pourfendeur divin", pv: 300 },
+        { name: "Moissonneur nocturne", pv: 300 },
+        { name: "Gantelet givrant", pv: 300 },
+        { name: "Masque abyssal", pv: 300 },
+        { name: "Convergence de Zeke", pv: 300 },
+        { name: "Couronne de la Reine brisée", pv: 250 },
+        { name: "Manteau de la nuit", pv: 250 },
+        { name: "Sac de l'explorateur", pv: 250 },
+        { name: "Pierre de balise vigilante", pv: 250 },
+        { name: "Bénédiction de Mikael", pv: 250 },
+        { name: "Régénérateur de pierre de lune", pv: 200 },
+        { name: "Linceul de la congruence", pv: 200 },
+        { name: "Rédemption", pv: 200 },
+        { name: "Médaillon de l'Iron Solari", pv: 200 },
+        { name: "Vœu du chevalier", pv: 200 },
+        { name: "Cotte épineuse", pv: 150 },
+      ];
+    </script>
+  </head>
+  <body>
+    <select id="itemTypeSelect">
+      <option value="puissance">Puissance</option>
+      <option value="armure">Armure</option>
+      <option value="resistanceMagique">Résistance Magique</option>
+      <option value="degatsAttaque">Dégâts d'Attaque</option>
+      <option value="pv">PV</option>
+    </select>
+
+    <canvas id="smallChart" width="100" height="50"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const itemTypes = {
+        puissance: items,
+        armure: armureItems,
+        resistanceMagique: magicResistItems,
+        degatsAttaque: attackDamageItems,
+        pv: healthItems,
+      };
+
+      const smallCtx = document.getElementById("smallChart").getContext("2d");
+
+      const smallChart = new Chart(smallCtx, {
+        type: "line",
+        data: {
+          labels: items.map((item) => item.name),
+          datasets: [
+            {
+              label: "Puissance des Objets",
+              data: items.map((item) => item.puissance),
+              backgroundColor: "rgba(97, 44, 222, 0.2)",
+              borderColor: "rgba(97, 44, 222, 1)",
+              borderWidth: 1,
+              fill: false,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return `${context.label}: ${context.raw}`;
+                },
+              },
+            },
+          },
+        },
+      });
+
+      document
+        .getElementById("itemTypeSelect")
+        .addEventListener("change", function () {
+          const selectedType = this.value;
+          const selectedItems = itemTypes[selectedType];
+          const labels = selectedItems.map((item) => item.name);
+          const data = selectedItems.map((item) => item[selectedType]);
+
+          smallChart.data.labels = labels;
+          smallChart.data.datasets[0].data = data;
+          smallChart.data.datasets[0].label = `Graphique de ${selectedType}`;
+          smallChart.update();
+        });
+    </script>
+
+    <style>
+      #toggleChartBtn,
+      #itemTypeSelect {
+        margin: 10px;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: rgba(97, 44, 222, 1);
+        color: white;
+        cursor: pointer;
+      }
+
+      #toggleChartBtn:hover,
+      #itemTypeSelect:hover {
+        background-color: rgba(97, 44, 222, 1);
+      }
+    </style>
+  </body>
+</html>
+<style></style>

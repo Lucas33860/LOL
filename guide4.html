@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GUIDE 4</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h1,
+      h2 {
+        color: #333;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        display: none; /* Hide tables initially */
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Meilleurs Items de départ</h1>
+    <h2>Mage</h2>
+    <table id="mageTable" border="1">
+      <tr>
+        <th>Nom</th>
+        <th>Mana</th>
+      </tr>
+    </table>
+
+    <h2>Tank</h2>
+    <table id="tankTable" border="1">
+      <tr>
+        <th>Nom</th>
+        <th>PV</th>
+      </tr>
+    </table>
+
+    <h2>Tireur</h2>
+    <table id="tirreurTable" border="1">
+      <tr>
+        <th>Nom</th>
+        <th>Dégats d'attaque</th>
+      </tr>
+    </table>
+
+    <button id="showTablesButton">Afficher les tableaux</button>
+
+    <script>
+      // Chargement des données filtrées
+      fetch("filtered_items_final.json")
+        .then((response) => response.json())
+        .then((items) => {
+          // Fonction pour évaluer la qualité d'un item en fonction des stats
+          function evaluateItemForRole(item, role) {
+            let score = 0;
+
+            if (!item.stats || typeof item.stats !== "object") {
+              return score;
+            }
+
+            switch (role) {
+              case "mage":
+                // Les mages privilégient la puissance magique et la régénération de mana
+                score += item.stats.FlatMagicDamageMod || 0; // Puissance magique
+                score += item.stats.FlatMPPoolMod || 0; // Mana total
+                break;
+              case "tank":
+                // Les tanks privilégient l'armure, la résistance magique et les PV
+                score += item.stats.FlatArmorMod || 0; // Armure
+                score += item.stats.FlatSpellBlockMod || 0; // Résistance magique
+                score += item.stats.FlatHPPoolMod || 0; // Points de vie
+                break;
+              case "tirreur":
+                // Les tireurs privilégient les dégâts physiques et la vitesse d'attaque
+                score += item.stats.FlatPhysicalDamageMod || 0; // Dégâts d'attaque
+                score += item.stats.PercentAttackSpeedMod || 0; // Vitesse d'attaque
+                break;
+              default:
+                return score;
+            }
+
+            return score;
+          }
+
+          // Initialiser les meilleurs items pour chaque rôle
+          let bestMageItem = null;
+          let bestTankItem = null;
+          let bestTirreurItem = null;
+          let bestMageScore = -Infinity;
+          let bestTankScore = -Infinity;
+          let bestTirreurScore = -Infinity;
+
+          // Parcourir tous les items et sélectionner le meilleur pour chaque rôle
+          items.forEach((item) => {
+            // Évaluer l'item pour chaque rôle
+            const mageScore = evaluateItemForRole(item, "mage");
+            const tankScore = evaluateItemForRole(item, "tank");
+            const tirreurScore = evaluateItemForRole(item, "tirreur");
+
+            // Comparer et mettre à jour le meilleur item pour chaque rôle
+            if (mageScore > bestMageScore) {
+              bestMageScore = mageScore;
+              bestMageItem = item;
+            }
+
+            if (tankScore > bestTankScore) {
+              bestTankScore = tankScore;
+              bestTankItem = item;
+            }
+
+            if (tirreurScore > bestTirreurScore) {
+              bestTirreurScore = tirreurScore;
+              bestTirreurItem = item;
+            }
+          });
+
+          // Afficher les résultats des meilleurs items dans les tableaux
+          const mageTable = document.getElementById("mageTable");
+          const tankTable = document.getElementById("tankTable");
+          const tirreurTable = document.getElementById("tirreurTable");
+
+          if (bestMageItem) {
+            const row = mageTable.insertRow();
+            row.insertCell(0).innerText = bestMageItem.name;
+            row.insertCell(1).innerText = bestMageScore;
+          }
+
+          if (bestTankItem) {
+            const row = tankTable.insertRow();
+            row.insertCell(0).innerText = bestTankItem.name;
+            row.insertCell(1).innerText = bestTankScore;
+          }
+
+          if (bestTirreurItem) {
+            const row = tirreurTable.insertRow();
+            row.insertCell(0).innerText = bestTirreurItem.name;
+            row.insertCell(1).innerText = bestTirreurScore;
+          }
+        });
+
+      document
+        .getElementById("showTablesButton")
+        .addEventListener("click", function () {
+          document.getElementById("mageTable").style.display = "table";
+          document.getElementById("tankTable").style.display = "table";
+          document.getElementById("tirreurTable").style.display = "table";
+          this.style.display = "none";
+        });
+
+      // Cacher les tableaux au départ
+      document.getElementById("mageTable").style.display = "none";
+      document.getElementById("tankTable").style.display = "none";
+      document.getElementById("tirreurTable").style.display = "none";
+    </script>
+  </body>
+</html>

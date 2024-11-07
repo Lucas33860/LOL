@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graphique des meilleurs items d'armure</title>
+    <!-- Inclure Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      canvas {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Graphique des meilleurs items d'armure en fonction du prix</h1>
+    <canvas id="graphique" width="800" height="600"></canvas>
+
+    <script>
+      // Données des objets (en format JavaScript)
+      const items = [
+        {
+          name: "Cotte épineuse",
+          armure: 75,
+          gold: 2450,
+          score: 0.030612244897959183,
+        },
+        { name: "Cœur gelé", armure: 75, gold: 2500, score: 0.03 },
+        {
+          name: "Présage de Randuin",
+          armure: 75,
+          gold: 2700,
+          score: 0.027777777777777776,
+        },
+        {
+          name: "Désespoir infini",
+          armure: 60,
+          gold: 2800,
+          score: 0.02142857142857143,
+        },
+        {
+          name: "Plaque du mort",
+          armure: 55,
+          gold: 2900,
+          score: 0.01896551724137931,
+        },
+        {
+          name: "Égide solaire",
+          armure: 50,
+          gold: 2700,
+          score: 0.018518518518518517,
+        },
+        {
+          name: "Lithoplastron de gargouille",
+          armure: 60,
+          gold: 3250,
+          score: 0.018461538461538463,
+        },
+        {
+          name: "Vœu du chevalier",
+          armure: 40,
+          gold: 2300,
+          score: 0.017391304347826087,
+        },
+        {
+          name: "Gantelet givrant",
+          armure: 50,
+          gold: 2900,
+          score: 0.017241379310344827,
+        },
+        {
+          name: "Sac de l'explorateur",
+          armure: 40,
+          gold: 2400,
+          score: 0.016666666666666666,
+        },
+      ];
+
+      // Préparer les données pour le graphique
+      const armure = items.map((item) => item.armure);
+      const gold = items.map((item) => item.gold);
+      const score = items.map((item) => item.score);
+
+      // Configuration du graphique
+      const ctx = document.getElementById("graphique").getContext("2d");
+      const graphique = new Chart(ctx, {
+        type: "bubble",
+        data: {
+          datasets: [
+            {
+              label: "Objets",
+              data: items.map((item, index) => ({
+                x: item.armure,
+                y: item.gold,
+                r: item.score * 200, // Augmenter la taille des bulles (200 pour un effet plus prononcé)
+              })),
+              backgroundColor: "#612CDE", // Couleur des points (code hexadécimal)
+              borderColor: "#612CDE", // Couleur des bordures des points
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: {
+            x: {
+              type: "linear",
+              position: "bottom",
+              title: {
+                display: true,
+                text: "Armure",
+              },
+            },
+            y: {
+              title: {
+                display: true,
+                text: "Gold",
+              },
+            },
+          },
+          plugins: {
+            tooltip: {
+              callbacks: {
+                // Afficher des informations détaillées lors du survol d'un point
+                title: (tooltipItem) => {
+                  const item = items[tooltipItem[0].dataIndex];
+                  return item.name;
+                },
+                label: (tooltipItem) => {
+                  const item = items[tooltipItem.dataIndex];
+                  return `Armure: ${item.armure}, Gold: ${
+                    item.gold
+                  }, Score: ${item.score.toFixed(4)}`;
+                },
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

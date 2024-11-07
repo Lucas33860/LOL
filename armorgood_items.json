@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Cœur gelé",
+    "description": "75 armure"
+  },
+  {
+    "name": "Présage de Randuin",
+    "description": "350 PV+75 armure"
+  },
+  {
+    "name": "Cotte épineuse",
+    "description": "150 PV+75 armure"
+  },
+
+  {
+    "name": "Lithoplastron de gargouille",
+    "description": "60 armure"
+  },
+  {
+    "name": "Désespoir infini",
+    "description": "350 PV+ 60 armure"
+  },
+  {
+    "name": "Plaque du mort",
+    "description": "350 PV+55 armure"
+  },
+  {
+    "name": "Danse de la mort",
+    "description": "60 dégâts d'attaque+15 accélération de compétence+50 armure"
+  },
+  {
+    "name": "Égide solaire",
+    "description": "350 PV+50 armure"
+  },
+  {
+    "name": "Sablier de Zhonya",
+    "description": "105 puissance+50 armure"
+  },
+  {
+    "name": "Gantelet givrant",
+    "description": "300 PV+50 armure"
+  },
+  {
+    "name": "Jak'Sho, le Protéiforme",
+    "description": "350 PV+45 armure"
+  },
+  {
+    "name": "Ange gardien",
+    "description": "55 dégâts d'attaque + 45 armure"
+  },
+  {
+    "name": "Vœu du chevalier",
+    "description": "200 PV+40 armure"
+  },
+
+  {
+    "name": "Linceul de la congruence",
+    "description": "200 PV+30 armure"
+  },
+  {
+    "name": "Vertu radieuse",
+    "description": "350 PV+30 armure"
+  },
+  {
+    "name": "Convergence de Zeke",
+    "description": "300 PV+25 armure"
+  },
+  {
+    "name": "Médaillon de l'Iron Solari",
+    "description": "200 PV+25 armure"
+  }
+]
