@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Graphique des meilleurs items d'armure</title>
+    <title>Graphique des Objets - PV, Gold, et Score</title>
     <!-- Inclure Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
@@ -12,17 +12,165 @@
         text-align: center;
       }
       canvas {
-        margin: 0 auto;
+        margin: 20px auto;
       }
     </style>
   </head>
   <body>
-    <h1>Graphique des meilleurs items d'armure en fonction du prix</h1>
-    <canvas id="graphique" width="800" height="600"></canvas>
+    <h1>Graphiques des Objets en fonction de PV, Gold, et Score</h1>
+
+    <!-- Premier graphique : Barres pour PV, Gold, et Score -->
+    <canvas id="graphiqueBarres" width="1200" height="600"></canvas>
+
+    <!-- Deuxième graphique : Graphique à bulles des meilleurs items d'armure -->
+    <canvas id="graphique" width="1200" height="600"></canvas>
 
     <script>
       // Données des objets (en format JavaScript)
       const items = [
+        {
+          name: "Armure de Warmog",
+          PV: 1000,
+          gold: 3300,
+          score: 0.30303030303030304,
+        },
+        { name: "Cœuracier", PV: 900, gold: 3000, score: 0.3 },
+        { name: "Jugement d'Atma", PV: 700, gold: 2500, score: 0.28 },
+        {
+          name: "Approche de l'hiver",
+          PV: 550,
+          gold: 2400,
+          score: 0.22916666666666666,
+        },
+        { name: "Fimbulvetr", PV: 550, gold: 2400, score: 0.22916666666666666 },
+        { name: "Bâton séculaire", PV: 400, gold: 2500, score: 0.16 },
+        { name: "Gage de Sterak", PV: 400, gold: 2500, score: 0.16 },
+        {
+          name: "Bâton séculaire",
+          PV: 400,
+          gold: 2600,
+          score: 0.15384615384615385,
+        },
+        { name: "Éviscérateur", PV: 400, gold: 3200, score: 0.125 },
+        {
+          name: "Bénédiction de Mikael",
+          PV: 250,
+          gold: 2300,
+          score: 0.10869565217391304,
+        },
+        {
+          name: "Médaillon de l'Iron Solari",
+          PV: 200,
+          gold: 2200,
+          score: 0.09090909090909091,
+        },
+        { name: "Rédemption", PV: 200, gold: 2300, score: 0.08695652173913043 },
+        { name: "Étreinte du séraphin", PV: 200, gold: 2500, score: 0.08 },
+        { name: "Épée de l'aube", PV: 200, gold: 2500, score: 0.08 },
+        {
+          name: "Étreinte du séraphin",
+          PV: 200,
+          gold: 2900,
+          score: 0.06896551724137931,
+        },
+      ];
+
+      // Extraire les données pour chaque graphique
+      const labels = items.map((item) => item.name);
+      const PV = items.map((item) => item.PV);
+      const gold = items.map((item) => item.gold);
+      const score = items.map((item) => item.score);
+
+      // Configuration du premier graphique (Barres pour PV, Gold, et Score)
+      const ctxBarres = document
+        .getElementById("graphiqueBarres")
+        .getContext("2d");
+      const graphiqueBarres = new Chart(ctxBarres, {
+        type: "bar",
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: "PV",
+              data: PV,
+              backgroundColor: "#612CDE",
+              borderColor: "#612CDE",
+              borderWidth: 1,
+              yAxisID: "y1",
+            },
+            {
+              label: "Gold",
+              data: gold,
+              backgroundColor: "#FF6F61",
+              borderColor: "#FF6F61",
+              borderWidth: 1,
+              yAxisID: "y2",
+            },
+            {
+              label: "Score",
+              data: score.map((value) => value * 100),
+              backgroundColor: "#4CAF50",
+              borderColor: "#4CAF50",
+              borderWidth: 1,
+              yAxisID: "y3",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: {
+            x: {
+              beginAtZero: true,
+            },
+            y1: {
+              position: "left",
+              title: {
+                display: true,
+                text: "PV",
+              },
+            },
+            y2: {
+              position: "right",
+              title: {
+                display: true,
+                text: "Gold",
+              },
+              grid: {
+                drawOnChartArea: false,
+              },
+            },
+            y3: {
+              position: "right",
+              title: {
+                display: true,
+                text: "Rentabilité",
+              },
+              grid: {
+                drawOnChartArea: false,
+              },
+            },
+          },
+          plugins: {
+            tooltip: {
+              callbacks: {
+                title: (tooltipItem) => {
+                  const item = items[tooltipItem[0].dataIndex];
+                  return item.name;
+                },
+                label: (tooltipItem) => {
+                  const item = items[tooltipItem.dataIndex];
+                  return `PV: ${item.PV}, Gold: ${
+                    item.gold
+                  }, Score: ${item.score.toFixed(4)}`;
+                },
+              },
+            },
+          },
+        },
+      });
+
+      // Données pour le deuxième graphique (meilleurs items d'armure)
+      const itemsArmure = [
         {
           name: "Cotte épineuse",
           armure: 75,
@@ -80,12 +228,12 @@
         },
       ];
 
-      // Préparer les données pour le graphique
-      const armure = items.map((item) => item.armure);
-      const gold = items.map((item) => item.gold);
-      const score = items.map((item) => item.score);
+      // Préparer les données pour le graphique à bulles
+      const armure = itemsArmure.map((item) => item.armure);
+      const goldArmure = itemsArmure.map((item) => item.gold);
+      const scoreArmure = itemsArmure.map((item) => item.score);
 
-      // Configuration du graphique
+      // Configuration du graphique à bulles
       const ctx = document.getElementById("graphique").getContext("2d");
       const graphique = new Chart(ctx, {
         type: "bubble",
@@ -93,13 +241,13 @@
           datasets: [
             {
               label: "Objets",
-              data: items.map((item, index) => ({
+              data: itemsArmure.map((item) => ({
                 x: item.armure,
                 y: item.gold,
-                r: item.score * 200, // Augmenter la taille des bulles (200 pour un effet plus prononcé)
+                r: item.score * 200, // Augmenter la taille des bulles
               })),
-              backgroundColor: "#612CDE", // Couleur des points (code hexadécimal)
-              borderColor: "#612CDE", // Couleur des bordures des points
+              backgroundColor: "#612CDE",
+              borderColor: "#612CDE",
               borderWidth: 1,
             },
           ],
@@ -125,13 +273,12 @@
           plugins: {
             tooltip: {
               callbacks: {
-                // Afficher des informations détaillées lors du survol d'un point
                 title: (tooltipItem) => {
-                  const item = items[tooltipItem[0].dataIndex];
+                  const item = itemsArmure[tooltipItem[0].dataIndex];
                   return item.name;
                 },
                 label: (tooltipItem) => {
-                  const item = items[tooltipItem.dataIndex];
+                  const item = itemsArmure[tooltipItem.dataIndex];
                   return `Armure: ${item.armure}, Gold: ${
                     item.gold
                   }, Score: ${item.score.toFixed(4)}`;
