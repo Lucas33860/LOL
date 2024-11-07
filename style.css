@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nosifer&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 h1 {
   font-family: "Bebas Neue", sans-serif;
@@ -10,7 +11,7 @@ h1 {
 }
 
 header h2 {
-  font-family: "Inter";
+  font-family: "Inter" sans-serif;
   font-size: 48px;
   font-weight: 600;
   text-align: center;
@@ -33,7 +34,7 @@ h3 {
 }
 
 header p {
-  font-family: "Inter";
+  font-family: "Inter" sans-serif;
   font-size: 28px;
   text-align: center;
   margin: auto;
@@ -94,7 +95,7 @@ body {
 
 .card p {
   color: black;
-  font-family: "Inter";
+  font-family: "Inter" sans-serif;
   font-size: 1rem;
   margin: auto;
   width: 90%;
