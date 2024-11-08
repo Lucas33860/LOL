@@ -25,29 +25,29 @@
     <h1>Graphique des stats moyennes des types de champion</h1>
     <div>
       <div class="text">
-        <img src="images/Group 511.png" alt="Stat 1" />
+        <img src="images/Group 511.svg" alt="Stats Assassin" />
         <p>Assassin</p>
       </div>
       <div class="text">
-        <img src="images/Group 512.png" alt="Stat 2" />
+        <img src="images/Group 512.svg" alt="Stats Mage" />
         <p>Mage</p>
       </div>
       <div class="text">
-        <img src="images/Group 513.png" alt="Stat 3" />
+        <img src="images/Group 513.svg" alt="Stats Tank" />
         <p>Tank</p>
       </div>
     </div>
     <div class="part2">
       <div class="text">
-        <img src="images/Group 514.png" alt="Stat 4" />
+        <img src="images/Group 514.svg" alt="Stats Tireur" />
         <p>Tireur</p>
       </div>
       <div class="text">
-        <img src="images/Group 515.png" alt="Stat 5" />
+        <img src="images/Group 515.svg" alt="Stats Support" />
         <p>Support</p>
       </div>
       <div class="text">
-        <img src="images/Group 516.png" alt="Stat 6" />
+        <img src="images/Group 516.svg" alt="Stats Combattant" />
         <p>Combattant</p>
       </div>
     </div>
@@ -61,8 +61,8 @@
         justify-content: space-around;
         align-items: center;
       }
-      div text img {
-        max-width: 30%;
+      .text img {
+        width: 500px; /* Adjust the width as needed */
         height: auto;
       }
       .part2 {
@@ -71,3 +71,33 @@
     </style>
   </body>
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script>
+  gsap.from(".text img", {
+    duration: 0.5,
+    opacity: 0,
+    y: 50,
+    stagger: 0.2,
+    ease: "power2.out",
+  });
+
+  gsap.from(".text p", {
+    duration: 0.5,
+    opacity: 0,
+    y: 50,
+    stagger: 0.2,
+    ease: "power2.out",
+    delay: 0.5,
+  });
+  const images = document.querySelectorAll(".text img");
+
+  images.forEach((img) => {
+    img.addEventListener("mouseenter", () => {
+      gsap.to(img, { scale: 1.1, duration: 0.3 });
+    });
+
+    img.addEventListener("mouseleave", () => {
+      gsap.to(img, { scale: 1, duration: 0.3 });
+    });
+  });
+</script>
