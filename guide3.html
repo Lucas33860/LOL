@@ -15,14 +15,24 @@
         color: #612cde;
         margin-bottom: 50px;
       }
-      p {
+      .text p {
         font-family: "Bebas Neue", sans-serif;
         font-size: 2rem;
-        margin-right: 20px;
+        text-align: center;
+
         color: #612cde;
       }
     </style>
-    <h1>Graphique des stats moyennes des types de champion</h1>
+    <h1>Guide des statistiques de chaque type de champion</h1>
+    <p>
+      Dans League of Legends, des centaines de champions s’offrent aux joueurs,
+      chacun avec son style et ses statistiques. Pour un débutant, il peut être
+      difficile de trouver le champion qui lui correspond le mieux. À l’instar
+      d'autres jeux, League of Legends est structuré autour de classes de
+      personnages ayant chacune des caractéristiques distinctes. Ce guide aide
+      les joueurs à choisir un champion en fonction de leur style et de leur
+      personnalité.
+    </p>
     <div>
       <div class="text">
         <img src="images/Group 511.svg" alt="Stats Assassin" />
@@ -64,13 +74,101 @@
       .text img {
         width: 500px; /* Adjust the width as needed */
         height: auto;
+        margin-bottom: 20px;
       }
       .part2 {
         margin-top: 50px;
       }
+      p {
+        font-family: "Inter", sans-serif;
+        font-size: 22px;
+        text-align: justify;
+        margin: auto;
+        width: 71%;
+        margin-bottom: 2rem;
+        font-size: 26px;
+        color: black;
+      }
+      h2 {
+        font-family: "Bebas-Neue", sans-serif;
+        font-size: 2rem;
+        text-align: center;
+        color: #612cde;
+        margin-bottom: 2rem;
+      }
     </style>
+    <h2>Profil type des classes de champions</h2>
+    <h3>Il existe six classes principales de champions dans le jeu :</h3>
+    <style>
+      h3 {
+        font-family: "Inter", sans-serif;
+        font-size: 1.8rem;
+        text-align: center;
+        color: #612cde;
+        margin-bottom: 2rem;
+        font-weight: 400;
+      }
+      table {
+      width: 80%;
+      margin: 50px auto;
+      border-collapse: collapse;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.5rem;
+      color: #612cde;
+      }
+      th, td {
+      border: 2px solid #612cde;
+      padding: 15px;
+            text-align: center;
+      }
+      td{
+        color: black;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+      }
+      th {
+      background-color: #f2f2f2;
+      font-size: 30px;
+      }
+    </style>
+    <table>
+      <tr>
+      <th>Classe</th>
+      <th>Description</th>
+      </tr>
+      <tr>
+      <td>Assassins</td>
+      <td>Agiles et discrets, les Assassins sont spécialisés dans l’élimination rapide de cibles. Dotés d’une vitesse élevée (moyenne de 339) et d’un bon potentiel offensif (61 dégâts d’attaque en moyenne), ils sont redoutables en solo mais vulnérables en défense, avec une faible armure et portée.</td>
+      </tr>
+      <tr>
+      <td>Mages</td>
+      <td>Polyvalents, les Mages attaquent à distance avec de puissants sorts. Ils se caractérisent par une haute portée d’attaque (451 en moyenne), mais leurs dégâts de base sont modérés (55). Faibles en armure (26), ils peuvent contrôler le terrain à distance mais sont vulnérables au corps à corps.</td>
+      </tr>
+      <tr>
+      <td>Tanks</td>
+      <td>Résistants, les Tanks absorbent les dégâts pour protéger leurs alliés. Leur point fort est leur vie (639 en moyenne) et leur armure (35), mais leur portée d’attaque est la plus faible (158), ce qui les limite face aux attaques à distance.</td>
+      </tr>
+      <tr>
+      <td>Tireurs</td>
+      <td>Spécialistes des attaques à distance, les Tireurs infligent des dégâts continus à des cibles individuelles. Avec la portée la plus élevée (510) et une vitesse correcte (330), ils sont puissants à distance mais fragiles (26 d’armure), ce qui les rend vulnérables en mêlée.</td>
+      </tr>
+      <tr>
+      <td>Supports</td>
+      <td>Les Supports se concentrent sur l’aide aux alliés via des soins et des contrôles de foule. Bien qu’ils aient une portée (425) et une vitesse (332) convenables pour garder leurs distances, leur faible armure (29) les rend vulnérables. Ils comptent sur leurs alliés pour les protéger.</td>
+      </tr>
+      <tr>
+      <td>Combattants</td>
+      <td>Polyvalents, les Combattants allient attaque et défense en mêlée. Avec une armure solide (34), des dégâts d’attaque (63), mais une portée faible (163), ils sont idéaux pour les joueurs recherchant un style équilibré.</td>
+      </tr>
+    </table>
+    <h2>Conclusion
+    </h2>
+    <p>Choisir un champion peut sembler complexe, mais comprendre les caractéristiques de chaque classe permet d’identifier un style de jeu personnel. Que vous préfériez l’agilité des Assassins, la puissance des Mages, la résilience des Tanks, la précision des Tireurs, le soutien des Supports ou la polyvalence des Combattants, League of Legends propose une riche diversité. Chaque classe apporte un rôle unique dans les équipes, assurant un équilibre stratégique et une expérience de jeu variée pour tous les joueurs.</p>
   </body>
-</html>
+  <footer>
+    <p>&copy; 08/11/2024 Noah Laborde. Tous droits réservés.</p>
+  </footer>
+</html></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script>
   gsap.from(".text img", {
