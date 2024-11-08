@@ -14,11 +14,37 @@
       canvas {
         margin: 20px auto;
       }
+      p {
+        font-family: "Inter", sans-serif;
+        font-size: 22px;
+        text-align: justify;
+        margin: auto;
+        width: 71%;
+        margin-bottom: 2rem;
+      }
+      h2 {
+        font-family: "Bebas-Neue", sans-serif;
+        font-size: 2rem;
+        text-align: center;
+        color: #612cde;
+        margin-bottom: 2rem;
+      }
     </style>
   </head>
   <body>
-    <h1>Graphiques des Objets en fonction de PV, Gold, et Score</h1>
-
+    <h1>
+      Analyse de la rentabilité des items en fonction de LEUR COUT et de leurs
+      efficacité
+    </h1>
+    <p>
+      Dans le monde compétitif de League of Legends , la gestion des ressources
+      est essentielle pour optimiser les performances en jeu. Chaque achat doit
+      être réfléchi pour offrir le meilleur retour sur investissement, que ce
+      soit en termes de points de vie, d'armure ou d'autres statistiques
+      vitales. Cet article examine deux analyses visuelles pour vous aidez à
+      repérer les objets les plus louables et à faire des choix stratégiques.
+    </p>
+    <h2>Comparaison des Objets : PV, Coût en Or et Score de Rentabilité</h2>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
@@ -32,6 +58,25 @@
 
     <!-- Premier graphique : Barres pour PV, Gold, et Score -->
     <canvas id="graphiqueBarres" width="1200" height="600"></canvas>
+
+    <!-- Paragraphe ajouté entre les deux graphiques -->
+    <p>
+      Ce graphique utilise des barres pour comparer les objets selon trois
+      critères principaux : les points de vie (PV), le coût en or et un score de
+      rentabilité. Ce dernier exprime la valeur ajoutée de l'objet en fonction
+      de l'or investi, permettant d'identifier les articles avec le meilleur
+      rapport qualité-prix.
+    </p>
+    <p>
+      Par exemple, l'Armure de Warmog est un objet pris pour son apport
+      considérable en PV contre un certain coût en or. Son score de rentabilité
+      élevé montre qu'en dépit de son prix assez élevé, elle reste un excellent
+      choix pour les joueurs cherchant à maximiser la résistance de leur
+      champion tout en contrôlant leurs dépenses pour d'autres améliorations. À
+      l'inverse de l'Étreinte de Séraphine, qui n'est pas utile dans ce
+      contexte, le Gage de Sterak peut s'avérer intéressant, bien qu'il ne soit
+      pas le choix optimal.
+    </p>
 
     <!-- Deuxième graphique : Graphique à bulles des meilleurs items d'armure -->
     <canvas id="graphique" width="1200" height="600"></canvas>
@@ -300,5 +345,28 @@
         },
       });
     </script>
+    <p>
+      Le deuxième graphique, en bulles, se concentre exclusivement sur les
+      objets offrant de l'armure, mettant en lumière ceux qui allient coût
+      raisonnable et efficacité défensive. La taille des bulles représente le
+      score de rentabilité, permettant aux joueurs de repérer rapidement les
+      objets offrant le meilleur équilibre entre coût et protection. Des objets
+      comme la Cotte épineuse et le Cœur gelé se démarquent par leur bon rapport
+      entre coût en or et efficacité en armure. La Cotte épineuse, par exemple,
+      est particulièrement efficace pour contrer les champions qui mettent sur
+      les attaques de base, tandis que le Cœur gelé réduit la vitesse d'attaque
+      des adversaires à proximité, renforçant la résilience du champion contre
+      les combattants rapides tout en augmentant l’armure.
+    </p>
+    <p>
+      Grâce à ces analyses, vous pouvez affiner votre stratégie en choisissant
+      des objets qui maximisent votre impact tout en réduisant vos dépenses. En
+      tenant compte des critères de PV, d'armure et de coût, vous pourrez
+      optimiser vos achats et renforcer votre potentiel en jeu. Comprendre la
+      rentabilité des objets est un véritable atout pour dominer vos adversaires
+      tout en gérant efficacement vos ressources. Avec ces informations en tête,
+      vous serez prêt à faire des choix plus éclairés et à prendre l'avantage
+      sur le champ de bataille.
+    </p>
   </body>
 </html>
