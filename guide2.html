@@ -33,15 +33,14 @@
   </head>
   <body>
     <h1>
-      Analyse de la rentabilité des items en fonction de LEUR COUT et de leurs
-      efficacité
+      Analyse de la rentabilité des items en fonction de LEUR COUT et de leur efficacité
     </h1>
     <p>
-      Dans le monde compétitif de League of Legends , la gestion des ressources
+      Dans le monde compétitif de League of Legends, la gestion des ressources
       est essentielle pour optimiser les performances en jeu. Chaque achat doit
       être réfléchi pour offrir le meilleur retour sur investissement, que ce
-      soit en termes de points de vie, d'armure ou d'autres statistiques
-      vitales. Cet article examine deux analyses visuelles pour vous aidez à
+      sois en termes de points de vie, d'armure ou d'autres statistiques
+      vitales. Cet article examine deux analyses visuelles pour vous aider à
       repérer les objets les plus louables et à faire des choix stratégiques.
     </p>
     <h2>Comparaison des Objets : PV, Coût en Or et Score de Rentabilité</h2>
@@ -163,7 +162,7 @@
               yAxisID: "y2",
             },
             {
-              label: "Score",
+              label: "Rentabilité",
               data: score.map((value) => value * 100),
               backgroundColor: "#4CAF50",
               borderColor: "#4CAF50",
@@ -298,9 +297,9 @@
             {
               label: "Objets",
               data: itemsArmure.map((item) => ({
-                x: item.armure,
+                x: + item.armure,
                 y: item.gold,
-                r: item.score * 200, // Augmenter la taille des bulles
+                r: item.score * 400, // Augmenter la taille des bulles
               })),
               backgroundColor: "#612CDE",
               borderColor: "#612CDE",
