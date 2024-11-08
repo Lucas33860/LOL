@@ -121,21 +121,9 @@
     <script>
       const items = [
         {
-          name: "Cristal de saphir",
-          gold: 300,
-          stats: { FlatMPPoolMod: 300 },
-          category: "Mage",
-        },
-        {
           name: "Cristal de rubis",
           gold: 400,
           stats: { FlatHPPoolMod: 150 },
-          category: "Tank",
-        },
-        {
-          name: "Armure d'étoffe",
-          gold: 300,
-          stats: { FlatArmorMod: 15 },
           category: "Tank",
         },
         {
@@ -145,16 +133,28 @@
           category: "Tank",
         },
         {
+          name: "Tome d'amplification",
+          gold: 400,
+          stats: { FlatMagicDamageMod: 20 },
+          category: "Mage",
+        },
+        {
           name: "Épée longue",
           gold: 350,
           stats: { FlatPhysicalDamageMod: 10 },
           category: "Tireur",
         },
         {
-          name: "Dague",
-          gold: 250,
-          stats: { PercentAttackSpeedMod: 0.1 },
-          category: "Tireur",
+          name: "Cristal de saphir",
+          gold: 300,
+          stats: { FlatMPPoolMod: 300 },
+          category: "Mage",
+        },
+        {
+          name: "Armure d'étoffe",
+          gold: 300,
+          stats: { FlatArmorMod: 15 },
+          category: "Tank",
         },
         {
           name: "Collier rafraîchissant",
@@ -163,10 +163,10 @@
           category: "Mage",
         },
         {
-          name: "Tome d'amplification",
-          gold: 400,
-          stats: { FlatMagicDamageMod: 20 },
-          category: "Mage",
+          name: "Dague",
+          gold: 250,
+          stats: { PercentAttackSpeedMod: 0.1 },
+          category: "Tireur",
         },
         { name: "Charme féérique", gold: 200, stats: {}, category: "Mage" },
       ];
@@ -283,7 +283,7 @@
             borderWidth: 1,
           },
           {
-            label: "Résistance Magique (Tank)",
+            label: "Blocage Magique (Tank)",
             data: spellBlockStats,
             backgroundColor: "rgba(153, 102, 255, 0.6)",
             borderColor: "rgba(153, 102, 255, 1)",
@@ -321,48 +321,48 @@
         const category = item.category;
 
         detailsDiv.innerHTML = `
-                <strong>${item.name}</strong> (Gold: ${item.gold})<br>
-                <p><strong>Rôle:</strong> ${category}</p>
-                <ul>
-                    ${
-                      stats.FlatMPPoolMod
-                        ? `<li>Mana: +${stats.FlatMPPoolMod}</li>`
-                        : ""
-                    }
-                    ${
-                      stats.FlatHPPoolMod
-                        ? `<li>PV: +${stats.FlatHPPoolMod}</li>`
-                        : ""
-                    }
-                    ${
-                      stats.FlatArmorMod
-                        ? `<li>Armure: +${stats.FlatArmorMod}</li>`
-                        : ""
-                    }
-                    ${
-                      stats.FlatSpellBlockMod
-                        ? `<li>Résistance Magique: +${stats.FlatSpellBlockMod}</li>`
-                        : ""
-                    }
-                    ${
-                      stats.FlatPhysicalDamageMod
-                        ? `<li>Dégâts Physiques: +${stats.FlatPhysicalDamageMod}</li>`
-                        : ""
-                    }
-                    ${
-                      stats.PercentAttackSpeedMod
-                        ? `<li>Vitesse d'attaque: +${
-                            stats.PercentAttackSpeedMod * 100
-                          }%</li>`
-                        : ""
-                    }
-                    ${
-                      stats.FlatMagicDamageMod
-                        ? `<li>Puissance Magique: +${stats.FlatMagicDamageMod}</li>`
-                        : ""
-                    }
-                </ul>
-            `;
+          <strong>${item.name}</strong> (Gold: ${item.gold})<br>
+          <p><strong>Rôle:</strong> ${category}</p>
+          <ul>
+              ${
+                stats.FlatMPPoolMod
+                  ? `<li>Mana: +${stats.FlatMPPoolMod}</li>`
+                  : ""
+              }
+              ${
+                stats.FlatHPPoolMod
+                  ? `<li>PV: +${stats.FlatHPPoolMod}</li>`
+                  : ""
+              }
+              ${
+                stats.FlatArmorMod
+                  ? `<li>Armure: +${stats.FlatArmorMod}</li>`
+                  : ""
+              }
+              ${
+                stats.FlatSpellBlockMod
+                  ? `<li>Blocage Magique: +${stats.FlatSpellBlockMod}</li>`
+                  : ""
+              }
+              ${
+                stats.FlatPhysicalDamageMod
+                  ? `<li>Dégâts Physiques: +${stats.FlatPhysicalDamageMod}</li>`
+                  : ""
+              }
+              ${
+                stats.PercentAttackSpeedMod
+                  ? `<li>Vitesse d'attaque: +${
+                      stats.PercentAttackSpeedMod * 100
+                    }%</li>`
+                  : ""
+              }
+              ${
+                stats.FlatMagicDamageMod
+                  ? `<li>Puissance Magique: +${stats.FlatMagicDamageMod}</li>`
+                  : ""
+              }
+          </ul>
+      `;
       }
 
       // Créer les deux graphiques
